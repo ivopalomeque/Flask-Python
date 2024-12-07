@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask Template</title>
+</head>
+<body>
+  <h1>Bienvenido, {{ nombre }}</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, libero.
+  </p>
+  <ul>
+    {% for emoji in emojis %}
+    <li>{{ emoji }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

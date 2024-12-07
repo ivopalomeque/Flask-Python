@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estado del usuario</title>
+</head>
+<body>
+  {% macro boton(tipo, texto) %}
+    <button class="{{ tipo }}">{{texto}}</button>
+  {% endmacro %}
+
+  {% if estado == "feliz" %}
+  <p>😊 ¡Estás feliz! ¡Sigue así! 🎉</p>
+  {% elif estado == "triste" %}
+  <p>😢 Lo sentimos, esperamos que mejores pronto. 💪</p>
+  {% else %}
+  <p>🤔 No sabemos cómo te sientes. ¡Avísanos! 🌈</p>
+  {% endif %}
+
+  <h2>Botones con macros</h2>
+  {{ boton("primary-btn", "Haz clic aquí") }}
+  {{ boton("danger-btn", "Cancelar") }}
+</body>
+</html>
+
